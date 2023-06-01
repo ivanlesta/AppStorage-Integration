@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <error-page>
+    <exception-type>jakarta.servlet.ServletException</exception-type>
+    <location>/ErrorHandler</location>
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/error404.jsp</location>
+  </error-page>
+  <servlet>
+    <description></description>
+    <display-name>ErrorHandler</display-name>
+    <servlet-name>ErrorHandler</servlet-name>
+    <servlet-class>ficheros.ErrorHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ErrorHandler</servlet-name>
+    <url-pattern>/ErrorHandler</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Errores</display-name>
+    <servlet-name>Errores</servlet-name>
+    <servlet-class>ficheros.Errores</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Errores</servlet-name>
+    <url-pattern>/Errores</url-pattern>
+  </servlet-mapping>
+</web-app>
